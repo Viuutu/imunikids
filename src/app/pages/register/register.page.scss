@@ -1,0 +1,97 @@
+.register-page {
+  --background: linear-gradient(
+    180deg,
+    #ABC270 0%,
+    #FEC868 100%
+  );
+}
+
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+.brand-section {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.brand-section h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #473C33;
+  letter-spacing: -2px;
+  margin-bottom: 8px;
+}
+
+.brand-section p {
+  font-size: 1.1rem;
+  color: #473C33;
+  opacity: 0.8;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.register-card {
+  background: #473C33;
+  border-radius: 32px;
+  box-shadow: 0 10px 30px rgba(194, 191, 190, 0.15);
+}
+
+ion-card-header {
+  text-align: center;
+  padding: 24px 24px 32px 24px;
+}
+
+ion-card-title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+ion-item {
+  --background: #6B5B4F;
+  --color: white;
+  --highlight-color-focused: #FDA769;
+
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+ion-input {
+  --color: white;
+  --highlight-color: #FDA769;
+  --highlight-color-focused: #FDA769;
+}
+
+.register-btn {
+  margin-top: 24px;
+
+  --background: #FDA769;
+  --color: #473C33;
+
+  font-weight: bold;
+  height: 52px;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #FDA769;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .register-container {
+    max-width: 500px;
+    margin: auto;
+  }
+}
