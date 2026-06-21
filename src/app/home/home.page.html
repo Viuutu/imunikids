@@ -1,20 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>ImuniKids</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="hero">
+    <h1>ImuniKids 👶</h1>
+    <p>Sua carteira digital de vacinação infantil</p>
   </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Maria Oliveira</ion-card-title>
+      <ion-card-subtitle>2 anos</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <h3>Cobertura Vacinal</h3>
+
+      <ion-progress-bar value="0.8"></ion-progress-bar>
+
+      <p>8 de 10 vacinas aplicadas</p>
+
+      <div class="status success">
+        🟢 Em dia
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

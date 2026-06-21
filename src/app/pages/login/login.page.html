@@ -1,0 +1,52 @@
+<ion-content class="login-page">
+
+  <div class="login-container">
+
+    <div class="brand-section">
+      <h1>ImuniKids</h1>
+      <p>Sua carteira digital de vacinação infantil</p>
+    </div>
+
+    <ion-card class="login-card">
+
+      <ion-card-header>
+        <ion-card-title>Entrar</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <ion-item>
+          <ion-input
+            label="E-mail"
+            labelPlacement="floating"
+            type="email">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            label="Senha"
+            labelPlacement="floating"
+            type="password">
+          </ion-input>
+        </ion-item>
+
+        <ion-button
+          expand="block"
+          class="login-btn"
+          (click)="goToDashboard()">
+          Entrar
+        </ion-button>
+
+        <div class="register-link">
+          Não possui conta?
+          <a (click)="goToRegister()">Criar conta</a>
+        </div>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+</ion-content>
