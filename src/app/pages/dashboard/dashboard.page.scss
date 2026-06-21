@@ -1,0 +1,100 @@
+.dashboard-page {
+  --background: linear-gradient(
+    180deg,
+    #ABC270 0%,
+    #FEC868 100%
+  );
+}
+
+.dashboard-container {
+  padding: 24px;
+}
+
+.welcome-section {
+  margin-bottom: 24px;
+}
+
+.welcome-section h1 {
+  color: #473C33;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.welcome-section p {
+  color: #473C33;
+  opacity: 0.8;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  border-radius: 20px;
+  text-align: center;
+}
+
+.stat-card .icon {
+  font-size: 2rem;
+}
+
+.stat-card h2 {
+  color: #473C33;
+  font-size: 1.8rem;
+  margin: 8px 0;
+}
+
+.section-title {
+  color: #473C33;
+  margin-bottom: 12px;
+}
+
+.child-card {
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.child-card h3 {
+  color: #473C33;
+  font-weight: 700;
+}
+
+ion-progress-bar {
+  margin: 12px 0;
+
+  --background: #ABC270;
+  --progress-background: #e0e0e0;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.success {
+  color: #2e7d32;
+}
+
+.danger {
+  color: #c62828;
+}
+
+ion-fab-button {
+  --background: #FDA769;
+  --color: #473C33;
+}
+
+@media (min-width: 768px) {
+
+  .dashboard-container {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}

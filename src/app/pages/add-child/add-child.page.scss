@@ -1,0 +1,179 @@
+.child-page {
+  --background: linear-gradient(
+    180deg,
+    #ABC270 0%,
+    #FEC868 100%
+  );
+}
+
+.child-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+.brand-section {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.brand-section h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #473C33;
+  letter-spacing: -2px;
+  margin-bottom: 8px;
+}
+
+.brand-section p {
+  font-size: 1.1rem;
+  color: #473C33;
+  opacity: 0.8;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.child-card {
+  background: #473C33;
+  border-radius: 32px;
+  box-shadow: 0 10px 30px rgba(194, 191, 190, 0.15);
+}
+
+ion-card-header {
+  text-align: center;
+  padding: 24px 24px 32px 24px;
+}
+
+ion-card-title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+ion-item {
+  --background: #6B5B4F;
+  --color: white;
+  --highlight-color-focused: #FDA769;
+
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+ion-input,
+ion-select {
+  --color: white;
+  --placeholder-color: #d9d9d9;
+  --highlight-color: #FDA769;
+  --highlight-color-focused: #FDA769;
+  --highlight-color-valid: #FDA769;
+  --highlight-color-invalid: #FDA769;
+}
+
+ion-select {
+  color: white;
+}
+
+.avatar-title {
+  color: white;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  background: #6B5B4F;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+.avatar.selected {
+  border: 2px solid #FDA769;
+  background: #7A685A;
+  box-shadow: 0 0 10px rgba(253, 167, 105, 0.4);
+}
+
+.save-btn {
+  margin-top: 8px;
+
+  --background: #FDA769;
+  --color: #473C33;
+
+  height: 52px;
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.save-btn:active {
+  transform: scale(0.98);
+}
+
+.gender-section {
+  margin-bottom: 16px;
+}
+
+.gender-section label {
+  display: block;
+  color: white;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.gender-options {
+  display: flex;
+  gap: 12px;
+}
+
+.gender-btn {
+  flex: 1;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #6B5B4F;
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.gender-btn.selected {
+  background: #FDA769;
+  color: #473C33;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .child-container {
+    max-width: 600px;
+    margin: auto;
+  }
+}

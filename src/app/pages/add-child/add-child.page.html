@@ -1,0 +1,138 @@
+<ion-content class="child-page">
+
+  <div class="child-container">
+
+    <div class="brand-section">
+      <h1>ImuniKids</h1>
+      <p>Cadastre seu filho para iniciar o acompanhamento vacinal</p>
+    </div>
+
+    <ion-card class="child-card">
+
+      <ion-card-header>
+        <ion-card-title>Cadastrar Criança</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <ion-item>
+          <ion-input
+            [(ngModel)]="childName"
+            label="Nome Completo"
+            labelPlacement="floating">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            [(ngModel)]="birthDate"
+            label="Data de Nascimento"
+            labelPlacement="floating"
+            type="date">
+          </ion-input>
+        </ion-item>
+
+        <div class="gender-section">
+
+          <label>Sexo</label>
+
+          <div class="gender-options">
+
+            <button
+              type="button"
+              class="gender-btn"
+              [class.selected]="selectedGender === 'M'"
+              (click)="selectedGender = 'M'">
+
+              Masculino
+
+            </button>
+
+            <button
+              type="button"
+              class="gender-btn"
+              [class.selected]="selectedGender === 'F'"
+              (click)="selectedGender = 'F'">
+
+              Feminino
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <ion-item>
+          <ion-input
+            [(ngModel)]="cardNumber"
+            label="Número da Carteirinha"
+            labelPlacement="floating">
+          </ion-input>
+        </ion-item>
+
+        <div class="avatar-title">
+          Escolha um avatar
+        </div>
+
+        <div class="avatar-grid">
+
+          <div
+            class="avatar"
+            [class.selected]="selectedAvatar === '🐼'"
+            (click)="selectAvatar('🐼')">
+            🐼
+          </div>
+
+          <div
+            class="avatar"
+            [class.selected]="selectedAvatar === '🦁'"
+            (click)="selectAvatar('🦁')">
+            🦁
+          </div>
+
+          <div
+            class="avatar"
+            [class.selected]="selectedAvatar === '🐰'"
+            (click)="selectAvatar('🐰')">
+            🐰
+          </div>
+
+          <div
+            class="avatar"
+            [class.selected]="selectedAvatar === '🐻'"
+            (click)="selectAvatar('🐻')">
+            🐻
+          </div>
+
+          <div
+            class="avatar"
+            [class.selected]="selectedAvatar === '🦊'"
+            (click)="selectAvatar('🦊')">
+            🦊
+          </div>
+
+          <div
+            class="avatar"
+            [class.selected]="selectedAvatar === '🐨'"
+            (click)="selectAvatar('🐨')">
+            🐨
+          </div>
+
+        </div>
+
+        <ion-button
+          expand="block"
+          class="save-btn"
+          (click)="saveChild()">
+
+           Adicionar
+
+        </ion-button>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+</ion-content>

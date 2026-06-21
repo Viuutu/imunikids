@@ -1,13 +1,92 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>dashboard</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="dashboard-page">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">dashboard</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="dashboard-container">
+
+    <div class="welcome-section">
+      <h1>Olá, Victor!</h1>
+      <p>Acompanhe a vacinação dos seus filhos</p>
+    </div>
+
+    <div class="stats-grid">
+
+      <ion-card class="stat-card">
+        <ion-card-content>
+          <div class="icon">👶</div>
+          <h2>2</h2>
+          <span>Crianças</span>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="stat-card">
+        <ion-card-content>
+          <div class="icon">💉</div>
+          <h2>3</h2>
+          <span>Pendentes</span>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="stat-card">
+        <ion-card-content>
+          <div class="icon">🔴</div>
+          <h2>1</h2>
+          <span>Atrasada</span>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="stat-card">
+        <ion-card-content>
+          <div class="icon">📢</div>
+          <h2>2</h2>
+          <span>Campanhas</span>
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+
+    <h2 class="section-title">Filhos Cadastrados</h2>
+
+    <ion-card class="child-card">
+
+      <ion-card-content>
+
+        <h3>Maria Oliveira</h3>
+
+        <p>8 de 10 vacinas aplicadas</p>
+
+        <ion-progress-bar value="0.8"></ion-progress-bar>
+
+        <div class="status success">
+          🟢 Em dia
+        </div>
+
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card class="child-card">
+
+      <ion-card-content>
+
+        <h3>Gabriel Oliveira</h3>
+
+        <p>6 de 10 vacinas aplicadas</p>
+
+        <ion-progress-bar value="0.6"></ion-progress-bar>
+
+        <div class="status danger">
+          🔴 Vacina atrasada
+        </div>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      +
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>
