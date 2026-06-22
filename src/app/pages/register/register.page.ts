@@ -44,6 +44,6 @@ export class RegisterPage implements OnInit {
   }
 
   createAccount() {
-    this.router.navigate(['/add-child']);
+    this.router.navigate(['/dashboard']);
   }
 }

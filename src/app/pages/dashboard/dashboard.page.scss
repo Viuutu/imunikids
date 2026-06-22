@@ -10,6 +10,58 @@
   padding: 24px;
 }
 
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.menu-dropdown {
+  background: rgb(65, 22, 22);
+  border-radius: 16px;
+  padding: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+}
+
+.menu-dropdown button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.menu-dropdown button:hover {
+  background: #442525;
+  border-radius: 10px;
+}
+
+.menu-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #2f5fb3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.logo-title {
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 .welcome-section {
   margin-bottom: 24px;
 }
@@ -18,6 +70,7 @@
   color: #473C33;
   font-size: 2rem;
   font-weight: 800;
+  margin-bottom: 8px;
 }
 
 .welcome-section p {
@@ -27,7 +80,7 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 12px;
   margin-bottom: 24px;
 }
@@ -52,25 +105,95 @@
   margin-bottom: 12px;
 }
 
+.add-child-btn {
+  width: 100%;
+  background: #FDA769;
+  color: #473C33;
+  border: none;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  transition: all .3s ease;
+}
+
+.add-child-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
 .child-card {
   border-radius: 20px;
   margin-bottom: 16px;
 }
 
+.child-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #ABC270;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.delete-btn {
+  width: 100%;
+  margin-top: 12px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  background: #d32f2f;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .child-card h3 {
   color: #473C33;
   font-weight: 700;
+  margin: 0;
+}
+
+.child-header small {
+  display: block;
+  margin-top: 4px;
+  color: #666;
+  font-size: .85rem;
+}
+
+.child-card p {
+  margin: 4px 0 0;
+  color: #666;
+}
+
+.coverage {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #473C33;
 }
 
 ion-progress-bar {
   margin: 12px 0;
-
-  --background: #ABC270;
-  --progress-background: #e0e0e0;
+  --background: #e0e0e0;
+  --progress-background: #ABC270;
 }
 
 .status {
   font-weight: bold;
+  margin-top: 12px;
 }
 
 .success {
@@ -81,20 +204,227 @@ ion-progress-bar {
   color: #c62828;
 }
 
-ion-fab-button {
-  --background: #FDA769;
-  --color: #473C33;
+.details-btn {
+  width: 100%;
+  margin-top: 16px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  background: #FDA769;
+  color: #473C33;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.details-btn:hover {
+  opacity: .9;
+}
+
+.child-details {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.info-card {
+  background: #473C33;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.info-card span {
+  display: block;
+  color: #d9d9d9;
+  font-size: .85rem;
+  margin-bottom: 6px;
+}
+
+.info-card strong {
+  color: white;
+  font-size: 1rem;
+}
+
+.info-card input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+  color: #473C33;
+}
+
+.edit-btn {
+  display: block;
+  margin-top: 16px;
+  margin-left: auto;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #6B5B4F;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.save-btn,
+.cancel-btn {
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #ABC270;
+  color: #473C33;
+}
+
+.cancel-btn {
+  background: #e0e0e0;
+  color: #473C33;
+}
+
+.child-details h4 {
+  color: #473C33;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.child-details hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.vaccine-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: rgba(0,0,0,.05);
+}
+
+.danger-vaccine {
+  border-left: 4px solid #c62828;
+}
+
+.register-vaccine-btn {
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  background: #ABC270;
+  color: #473C33;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.vaccine-modal {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  border-radius: 24px 24px 0 0;
+  padding: 24px;
+  animation: slideUp .3s ease;
+}
+
+.vaccine-modal h3 {
+  color: #473C33;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.vaccine-modal label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #473C33;
+}
+
+.vaccine-modal input,
+.vaccine-modal select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  flex: 1;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 768px) {
-
   .dashboard-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
   }
 
   .stats-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
+  .edit-btn {
+    width: 100%;
+  }
+
+  .edit-actions {
+    flex-direction: column;
+  }
 }

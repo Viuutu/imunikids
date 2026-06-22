@@ -27,7 +27,11 @@ export const routes: Routes = [
       import('./home/home.page').then((m) => m.HomePage),
   },
   {
-    path: 'add-child',
-    loadComponent: () => import('./pages/add-child/add-child.page').then( m => m.AddChildPage)
+    path: 'campaigns',
+    loadComponent: () => import('./pages/campaigns/campaigns.page').then( m => m.CampaignsPage)
+  },
+  {
+    path: 'profile',
+    loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
   }
 ];
