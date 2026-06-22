@@ -73,7 +73,7 @@ newChild = {
   private router: Router
 ) {}
 
-  ngOnInit() {
+ngOnInit() {
 
   const children =
     localStorage.getItem('children');
@@ -81,7 +81,13 @@ newChild = {
   if (children) {
     this.children = JSON.parse(children);
   }
+
+  this.responsavelNome =
+    localStorage.getItem('responsavelNome')
+    || 'Responsável';
 }
+
+responsavelNome = '';
 
 openChildModal() {
   this.showChildModal = true;
@@ -124,9 +130,35 @@ saveChild() {
   showDetails: false,
   isEditing: false,
 
-  vaccinesApplied: [],
-  vaccinesPending: [],
-  vaccinesLate: []
+  vaccinesApplied: [
+      {
+        name: 'BCG',
+        date: '10/06/2023'
+      },
+      {
+        name: 'Hepatite B',
+        date: '10/06/2023'
+      }
+    ],
+
+    vaccinesPending: [
+      {
+        name: 'Pentavalente',
+        date: '15/08/2026'
+      },
+      {
+        name: 'Poliomielite',
+        date: '15/08/2026'
+      }
+    ],
+
+    vaccinesLate: [
+      {
+        name: 'Influenza',
+        date: '10/04/2026'
+      }
+    ]
+  
 });
 
   localStorage.setItem(

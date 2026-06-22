@@ -1,13 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="profile-page">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="profile-container">
+
+    <h1>👤 Perfil</h1>
+
+    <ion-card class="profile-card">
+
+      <ion-card-content>
+
+        <div class="avatar">
+          👨‍👩‍👧
+        </div>
+
+        <h2>{{ responsavelNome }}</h2>
+
+        <p>
+          Responsável pelas carteiras vacinais cadastradas.
+        </p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card class="info-card">
+
+      <ion-card-content>
+
+        <h3>📌 Informações</h3>
+
+        <p>
+          Acompanhe a vacinação infantil,
+          consulte campanhas ativas e mantenha
+          o histórico vacinal sempre atualizado.
+        </p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
 </ion-content>

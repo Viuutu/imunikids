@@ -1,13 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>campaigns</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="campaigns-page">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">campaigns</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="campaigns-container">
+
+    <h1>📢 Campanhas de Vacinação</h1>
+
+    <ion-card
+      class="campaign-card"
+      *ngFor="let campaign of campaigns">
+
+      <ion-card-content>
+
+        <div class="campaign-icon">
+          {{ campaign.icon }}
+        </div>
+
+        <h2>{{ campaign.title }}</h2>
+
+        <p>
+          <strong>Público:</strong>
+          {{ campaign.audience }}
+        </p>
+
+        <p>
+          <strong>Período:</strong>
+          {{ campaign.period }}
+        </p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
 </ion-content>

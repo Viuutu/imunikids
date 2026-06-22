@@ -34,16 +34,28 @@ import {
 })
 export class RegisterPage implements OnInit {
 
-  constructor(private router: Router) { }
+  nome = '';
+  email = '';
+  senha = '';
 
-  ngOnInit() {
-  }
+  constructor(
+    private router: Router
+  ) {}
+
+  ngOnInit() {}
 
   goToLogin() {
     this.router.navigate(['/login']);
   }
 
   createAccount() {
+
+    localStorage.setItem(
+      'responsavelNome',
+      this.nome
+    );
+
     this.router.navigate(['/dashboard']);
   }
+
 }

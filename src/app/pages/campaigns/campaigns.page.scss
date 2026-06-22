@@ -1,0 +1,36 @@
+.campaigns-page {
+  --background: linear-gradient(
+    180deg,
+    #ABC270 0%,
+    #FEC868 100%
+  );
+}
+
+.campaigns-container {
+  padding: 24px;
+}
+
+.campaigns-container h1 {
+  text-align: center;
+  color: #473C33;
+  margin-bottom: 24px;
+}
+
+.campaign-card {
+  border-radius: 24px;
+  margin-bottom: 16px;
+}
+
+.campaign-icon {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.campaign-card h2 {
+  color: #473C33;
+  text-align: center;
+}
+
+.campaign-card p {
+  color: #555;
+}
